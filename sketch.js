@@ -5,9 +5,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 4000);
+  createCanvas(1200, 600);
   button = createButton('click me');
-  button.position(19, 19);
+  button.position(19, 100);
   button.mousePressed(loadCamera);
 }
 
