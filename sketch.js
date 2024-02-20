@@ -1,9 +1,10 @@
 let button, img, p;
-let imgs = ['beedrill.png', "blastoise.png", "bulbasaur.png", "butterfree.png", "caterpie.png", "charizard.png","ivysaur.png","kakuna.png","metapod.png","pidgeot.png","pidgeotto.png","pidgey.png","raticate.png","rattata.png","squirtle.png","venusaur.png","wartortle.png","weedle.png"];
+let imgs = ['15_beedrill.png', "09_blastoise.png", "01_bulbasaur.png", "12_butterfree.png", "10_caterpie.png", "06_charizard.png","02_ivysaur.png","14_kakuna.png","11_metapod.png","18_pidgeot.png","17_pidgeotto.png","16_pidgey.png","20_raticate.png","19_rattata.png","07_squirtle.png","03_venusaur.png","08_wartortle.png","13_weedle.png"];
 let pokemon = []
+let pokeButtons = []
 function preload() {
   img = loadImage('assets/pipe.png');
-  p = loadImage('assets/pokemon_img/beedrill.png');
+  //p = loadImage('assets/pokemon_img/beedrill.png');
   for(let i = 0; i < 4; i++){
     for(let j =0; j < 4; j++){
       pokemon.push(loadImage('assets/pokemon_img/' + imgs[i * 4 + j]));
@@ -36,8 +37,11 @@ function draw(){
   for(let i = 0; i < 4; i++){
     for(let j =0; j < 4; j++){
       fill(19, 142, 191);
-      rect(800 + i * 150, 150 + j * 150, 80,80,5);
-      image(pokemon[i  * 4 + j],800 + i * 150, 150 + j * 150);
+      rect(1300 + i * 150, 150 + j * 150, 80,80,5);
+      let but = createButton("Select");
+      but.position(1310 + i * 150, 240 + j * 150);
+      pokeButtons.push(but);
+      image(pokemon[i  * 4 + j],1300 + i * 150, 150 + j * 150);
     }
   }
 
@@ -50,5 +54,5 @@ function draw(){
 
   //right display
   fill(19, 142, 191);
-  rect(1450,150, 400,650,5);
+  rect(800,150, 400,650,5);
 }
