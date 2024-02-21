@@ -1,9 +1,8 @@
 let button, img, p;
-let imgs = ['15_beedrill.png', "09_blastoise.png", "01_bulbasaur.png", "12_butterfree.png", "10_caterpie.png", "06_charizard.png","02_ivysaur.png","14_kakuna.png","11_metapod.png","18_pidgeot.png","17_pidgeotto.png","16_pidgey.png","20_raticate.png","19_rattata.png","07_squirtle.png","03_venusaur.png","08_wartortle.png","13_weedle.png"];
+let imgs = ['01_bulbasaur.png', '02_ivysaur.png', '03_venusaur.png', '06_charizard.png', '07_squirtle.png', '08_wartortle.png', '09_blastoise.png', '10_caterpie.png', '11_metapod.png', '12_butterfree.png', '13_weedle.png', '14_kakuna.png', '15_beedrill.png', '16_pidgey.png', '17_pidgeotto.png', '18_pidgeot.png', '19_rattata.png', '20_raticate.png'];
 let pokemon = []
 let pokeButtons = []
 function preload() {
-  img = loadImage('assets/pipe.png');
   //p = loadImage('assets/pokemon_img/beedrill.png');
   for(let i = 0; i < 4; i++){
     for(let j =0; j < 4; j++){
@@ -27,7 +26,7 @@ function setup() {
   text('Caught:16',860,90);
   text('Seen: 30',1000,90);
   text('Background color:',1400, 45);
-  myPicker = createColorPicker('cyan');
+  myPicker = createColorPicker('red');
   myPicker.position(1450, 50);
 
   //pokemon grid
