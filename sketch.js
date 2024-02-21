@@ -1,11 +1,15 @@
 let button, img, p;
-let imgs = ['15_beedrill.png', "09_blastoise.png", "01_bulbasaur.png", "12_butterfree.png", "10_caterpie.png", "06_charizard.png","02_ivysaur.png","14_kakuna.png","11_metapod.png","18_pidgeot.png","17_pidgeotto.png","16_pidgey.png","20_raticate.png","19_rattata.png","07_squirtle.png","03_venusaur.png","08_wartortle.png","13_weedle.png"];
-let nicknames = []
+let imgs = ['01_bulbasaur.png', '02_ivysaur.png', '03_venusaur.png', '06_charizard.png', '07_squirtle.png', '08_wartortle.png', '09_blastoise.png', '10_caterpie.png', '11_metapod.png', '12_butterfree.png', '13_weedle.png', '14_kakuna.png', '15_beedrill.png', '16_pidgey.png', '17_pidgeotto.png', '18_pidgeot.png', '19_rattata.png', '20_raticate.png'];
 let pokemon = []
 let pokeButtons = []
-let msg = "";
+let currentPokemon = -1
+
+function buttonClick(){
+  alert(this.value());
+  currentPokemon = this.value();
+}
+
 function preload() {
-  img = loadImage('assets/pipe.png');
   //p = loadImage('assets/pokemon_img/beedrill.png');
   for(let i = 0; i < 4; i++){
     for(let j =0; j < 4; j++){
@@ -13,7 +17,6 @@ function preload() {
     }
   }
 }
-
 function setup() {
   createCanvas(1920, 1080);
   background(94, 222, 247);
@@ -29,15 +32,18 @@ function setup() {
   text('Caught:16',860,90);
   text('Seen: 30',1000,90);
   text('Background color:',1400, 45);
-  myPicker = createColorPicker('cyan');
+  myPicker = createColorPicker('red');
   myPicker.position(1450, 50);
 
   //pokemon grid
+  pokemonIndex = 0
   for(let i = 0; i < 4; i++){
     for(let j =0; j < 4; j++){
       fill(19, 142, 191);
       rect(1300 + i * 150, 150 + j * 150, 80,80,5);
-      let but = createButton("Select");
+      // val = imgs[pokemonIndex++].split(".")[0]
+      but = createButton("select", str(pokemonIndex++));
+      but.mousePressed(buttonClick);
       but.position(1310 + i * 150, 240 + j * 150);
       pokeButtons.push(but);
       nicknames.push('');
@@ -82,7 +88,6 @@ function draw(){
   rect(0,0,1920,100);
   fill(0,0,0);
   textSize(50);
-  text('Pokedex',900,70);
   textSize(15);
   text('Caught:16',860,90);
   text('Seen: 30',1000,90);
@@ -102,7 +107,10 @@ function draw(){
   rect(75,150, 600,650,5);
   fill(0,0,0);
   textSize(15);
-  text('Click to pet and play sound',260,250);
+  if(currentPokemon != -1){
+    image(pokemon[int(currentPokemon)], 300, 350);
+  }
+  text('Click to pet and play sound',250,200);
   text('size',225,720);
   textSize(40);
 
