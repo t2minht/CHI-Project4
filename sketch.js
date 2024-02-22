@@ -2,8 +2,9 @@ let button, img, p;
 let imgs = ['01_bulbasaur.png', '02_ivysaur.png', '03_venusaur.png', '06_charizard.png', '07_squirtle.png', '08_wartortle.png', '09_blastoise.png', '10_caterpie.png', '11_metapod.png', '12_butterfree.png', '13_weedle.png', '14_kakuna.png', '15_beedrill.png', '16_pidgey.png', '17_pidgeotto.png', '18_pidgeot.png', '19_rattata.png', '20_raticate.png'];
 let pokemon = []
 let pokeButtons = []
-let currentPokemon = -1
-
+let currentPokemon = 0
+let myPicker;
+let msg;
 function buttonClick(){
   alert(this.value());
   currentPokemon = this.value();
@@ -42,12 +43,12 @@ function setup() {
       fill(19, 142, 191);
       rect(1300 + i * 150, 150 + j * 150, 80,80,5);
       // val = imgs[pokemonIndex++].split(".")[0]
-      but = createButton("select", str(pokemonIndex++));
-      but.mousePressed(buttonClick);
+       but = createButton("select", str(pokemonIndex++));
+      //but.mousePressed(buttonClick);
       but.position(1310 + i * 150, 240 + j * 150);
       pokeButtons.push(but);
-      nicknames.push('');
-      image(pokemon[i  * 4 + j],1300 + i * 150, 150 + j * 150);
+      // nicknames.push('');
+       image(pokemon[i  * 4 + j],1300 + i * 150, 150 + j * 150);
     }
   }
 
@@ -116,7 +117,7 @@ function draw(){
 
   text(msg,250,200);
 
-  //right display
+  // //right display
   fill(19, 142, 191);
   rect(800,150, 400,650,5);
   
