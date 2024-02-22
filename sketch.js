@@ -20,7 +20,6 @@ function buttonClick(){
   currentPokemon = this.value();
   msg = nicknames[currentPokemon];
   inp.value(nicknames[currentPokemon]);
-  // window.alert(currentPokemon);
 }
 
 function preload() {
