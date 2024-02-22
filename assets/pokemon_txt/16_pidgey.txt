@@ -1,0 +1,7 @@
+	Does not like to fight. It hides in tall grass and so on, foraging for food such as small bugs.
+
+Type 1: Normal
+Type 2: Flying
+
+Height: 0.3m
+Weight: 1.8kg

@@ -1,0 +1,7 @@
+A bewitching aroma wafts from its flower. The fragrance becalms those engaged in a battle.
+
+Type 1: Grass
+Type 2: Poison
+
+Height: 2.0m
+Weight: 100.0kg

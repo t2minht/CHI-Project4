@@ -1,0 +1,6 @@
+	Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures.
+Type 1: Fire
+Type 2: Flying
+
+Height: 1.7m
+Weight: 90.5kg

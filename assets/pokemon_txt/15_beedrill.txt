@@ -1,0 +1,7 @@
+May appear in a swarm. Flies at violent speeds, all the while stabbing with the toxic stinger on its rear.
+
+Type 1: Bug
+Type 2: Poison
+
+Height: 1.0m
+Weight: 29.5kg

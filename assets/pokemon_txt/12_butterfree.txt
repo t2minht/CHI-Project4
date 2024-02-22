@@ -1,0 +1,7 @@
+The wings are protected by a rain-repellent dust. As a result, this Pokémon can fly about even in rain.
+
+Type 1: Bug
+Type 2: Flying
+
+Height: 1.1m
+Weight: 32.0kg
