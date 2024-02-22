@@ -24,7 +24,7 @@ function buttonClick(){
 
 function preload() {
   soundFormats('mp3', 'ogg');
-  for(let i = 0; i < 4; i++){
+  for(let i = 0; i < 5; i++){
     for(let j =0; j < 4; j++){
       pokemon.push(loadImage('assets/pokemon_img/' + imgs[i * 4 + j]));
       sounds.push(loadSound('assets/pokemon_cry/' + crys[i * 4 + j]));
@@ -54,18 +54,18 @@ function setup() {
 
   //pokemon grid
   pokemonIndex = 0
-  for(let i = 0; i < 4; i++){
+  for(let i = 0; i < 5; i++){
     for(let j =0; j < 4; j++){
       fill(19, 142, 191);
-      rect(1300 + i * 150, 150 + j * 150, 80,80,5);
+      rect(1300 + j * 150, 150 + i * 150, 80,80,5);
       // val = imgs[pokemonIndex++].split(".")[0]
       textSize(45);
       but = createButton("select", str(pokemonIndex++));
       but.mousePressed(buttonClick);
-      but.position(1310 + i * 150, 240 + j * 150);
+      but.position(1310 + j * 150, 240 + i * 150);
       pokeButtons.push(but);
       // nicknames.push('');
-       image(pokemon[i  * 4 + j],1300 + i * 150, 150 + j * 150);
+       image(pokemon[i  * 4 + j],1300 + j * 150, 150 +i * 150);
     }
   }
 
@@ -117,17 +117,18 @@ function draw(){
   rect(0,0,1920,100);
   fill(0,0,0);
   textSize(50);
+  text('Pokédex',900,70);
   textSize(15);
-  text('Caught:16',860,90);
+  text('Caught: 20',860,90);
   text('Seen: 30',1000,90);
   text('Background color:',1400, 45);
   
   //pokemon grid
-  for(let i = 0; i < 4; i++){
+  for(let i = 0; i < 5; i++){
     for(let j =0; j < 4; j++){
       fill(19, 142, 191);
-      rect(1300 + i * 150, 150 + j * 150, 80,80,5);
-      image(pokemon[i  * 4 + j],1305 + i * 150, 160 + j * 150);
+      rect(1300 + j * 150, 150 + i * 150, 80,80,5);
+      image(pokemon[i  * 4 + j],1305 + j * 150, 160 + i * 150);
     }
   }
 
