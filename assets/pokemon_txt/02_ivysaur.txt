@@ -1,0 +1,7 @@
+There is a plant bulb on its back. When it absorbs nutrients, the bulb is said to blossom into a large flower.
+
+Type 1: Grass
+Type 2: Poison
+
+Height: 1.0m
+Weight: 13.0kg

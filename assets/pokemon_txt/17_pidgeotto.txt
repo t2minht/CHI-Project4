@@ -1,0 +1,7 @@
+The claws on its feet are well developed. It can carry prey such as an Exeggcute to its nest over 60 miles away.
+
+Type 1: Normal
+Type 2: Flying
+
+Height: 1.1m
+Weight: 30.0kg

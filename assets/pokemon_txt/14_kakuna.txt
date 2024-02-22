@@ -1,0 +1,7 @@
+This Pokémon is in a temporary stage while making its body. It is almost completely unable to move on its own.
+
+Type 1: Bug
+Type 2: Poison
+
+Height: 0.6m
+Weight: 10.0kg
